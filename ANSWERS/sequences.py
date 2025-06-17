@@ -6,8 +6,8 @@ fruits = [
 ]
 
 for c in ctemps:
-    f = ((9 * c) / 5) + 32
-    print(f"{c:.1f} C is {f:.1f} F")
+    fahr = ((9 * c) / 5) + 32
+    print(f"{c:.1f} C is {fahr:.1f} F")
 
 print()
 
