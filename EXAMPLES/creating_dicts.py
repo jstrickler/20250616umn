@@ -1,4 +1,5 @@
 d1 = {}  # create new empty dict
+x = dict() # also works
 
 # initialize dict with key/value pairs 
 # (keys can be any string, number or tuple of strings or numbers)

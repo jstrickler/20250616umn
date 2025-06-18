@@ -18,6 +18,9 @@ airports['SLC'] = 'Salt Lake City'
 airports['LAX'] = 'Lost Angels'
 print(airports['SLC'])  # print value where key is 'SLC'
 
+# print(f"{airports['PSP'] = }")
+
+
 code = 'PSP'
 
 if code in airports:   # is key in dictionary?
