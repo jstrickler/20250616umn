@@ -10,7 +10,10 @@ books = [
     "His Last Bow",
     "The Case-Book of Sherlock Holmes",
 ]
+for book in sorted(books):  # sort using custom function
+    print(book)
 
+print('-' * 60)
 
 def strip_article(title):  # create function which takes element to compare and returns comparison key
     title = title.lower()

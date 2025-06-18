@@ -1,4 +1,6 @@
 import sqlite3
+from pprint import pprint
+from db_iterrows import iterrows_asdict
 
 # conn = sqlite3.Connection(...)
 with sqlite3.connect("../DATA/presidents.db") as conn:  # connect to the database
@@ -11,7 +13,6 @@ with sqlite3.connect("../DATA/presidents.db") as conn:  # connect to the databas
         from presidents
     ''')  # execute a SQL statement
 
-    for term, firstname, lastname, party in s3_cursor.fetchall():
-        print(f"{term:2d} {firstname:25} {lastname:20} {party}")
-    print()
+    pprint(list(iterrows_asdict(s3_cursor)))
+    
 

@@ -14,6 +14,8 @@ with sqlite3.connect("../DATA/presidents.db") as s3conn:  # connect to database
 
     try:
         cursor.execute(sql_insert)
+        # next execute
+        # ...
     except (sqlite3.OperationalError, sqlite3.DatabaseError, sqlite3.DataError) as err:
         print(err)
         s3conn.rollback()

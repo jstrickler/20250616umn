@@ -1,5 +1,6 @@
 import psycopg
 
+
 pg_conn = psycopg.connect(
     host="localhost",
     dbname="postgres",
@@ -37,6 +38,7 @@ pg_cursor.execute('''
 print(f"{pg_cursor.fetchmany(100) = }")
 print(f"{pg_cursor.fetchmany(100) = }")
 
+pprint(pg_cursor.description)
 
 pg_cursor.close()
 pg_conn.close()

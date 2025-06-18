@@ -13,7 +13,7 @@ where termnum = ?
 PARTY_QUERY = """
 select termnum, firstname, lastname, party
 from presidents
-where termnum = ?
+where termnum = :term
 """
 
 with sqlite3.connect("../DATA/presidents.db") as s3conn:
@@ -23,6 +23,5 @@ with sqlite3.connect("../DATA/presidents.db") as s3conn:
     s3cursor.executemany(PARTY_UPDATE, TERMS_TO_UPDATE) 
 
     for param in TERMS_TO_UPDATE:
-        term = param[0]
-        s3cursor.execute(PARTY_QUERY, (term,))
+        s3cursor.execute(PARTY_QUERY, {'term': param[0]})
         print(s3cursor.fetchone())

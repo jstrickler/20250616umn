@@ -3,9 +3,12 @@ def double(n):  # one required parameter
 
 d = double(5)
 print(f"{d = }")
+print(f"{double('trouble') = }")
+
 
 def rectangle_area(length, width):
     return length * width
 
 r = rectangle_area(5, 8)
 print(f"{r = }")
+

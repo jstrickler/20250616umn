@@ -4,7 +4,9 @@ fruit = ["pomegranate", "cherry", "apricot", "date", "Apple", "lemon",
          "BLUEberry", "lychee", "grape"]
 
 def ignore_case(item):  # Parameter is _one_ element of iterable to be sorted
-    return item.lower()  # Return value to sort on
+    comparison_value = item.lower()
+    print(f"comparing {item} as {comparison_value}")
+    return comparison_value  # Return value to sort on
 
 fs1 = sorted(fruit, key=ignore_case)  # Specify function with named parameter key
 print("Ignoring case:")
